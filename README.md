@@ -33,6 +33,6 @@ gcloudsttTest => thapgil
 google_api_test => 구글 stt api를 이용하여 timecode와 자막생성, 이 결과를 test.json파일에 저장, test.json이 없을 경우 새로 생성
 ```
 
-<img src="https://user-images.githubusercontent.com/68285994/137739196-842f7690-1525-4b66-b472-13c2b8dcb444.png" width="200" height="400"/>
+<img src="https://user-images.githubusercontent.com/68285994/137739196-842f7690-1525-4b66-b472-13c2b8dcb444.png" width="300" height="400"/>
 
 
