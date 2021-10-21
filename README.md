@@ -40,6 +40,7 @@ google_api_test => 구글 stt api를 이용하여 timecode와 자막생성, 이 
 ```
 classify_Text ==> text분류하기 (in korean)
 데이터는 Naver sentiment movie corpus v1.0을 사용
-네이버 영화 리뷰 감정 분석 ==> 영화 리뷰 데이터를 통해 학습한 뒤 해당 리뷰가 긍정적인 리뷰인지 아닌지를 예측
+네이버 영화 리뷰 감정 분석 
+==> 영화 리뷰 데이터를 통해 학습한 뒤 해당 리뷰가 긍정적인 리뷰인지 아닌지를 예측
 ```
 
