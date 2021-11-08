@@ -44,3 +44,12 @@ classify_Text ==> text분류하기 (in korean)
 ==> 영화 리뷰 데이터를 통해 학습한 뒤 해당 리뷰가 긍정적인 리뷰인지 아닌지를 예측
 ```
 
+### 6.
+
+```
+pbl
+data는 깃허브의 사이즈 제한으로 올리지 못함
+여러 모델 실험 중(CNN, Logistic Regression 등)
+
+```
+
