@@ -25,20 +25,22 @@ def main(video, idd=0):
     shutil.copyfile(DATA_BASE_PATH+video, data_output_folder+"copied_"+video)   #사본
     videoclip = VideoFileClip(data_output_folder+"copied_"+video)
     audioclip = videoclip.audio
-    audioclip.write_audiofile(data_output_folder+"tmp.wav")
-    y = [0,1,1,0,0,0,1,0,1,1] #26초에 0.5 묵음
-    make_quiet_wav(data_output_folder+"tmp.wav", y, data_output_folder+"{}_result_{}.wav".format(idd, video))
+    audioclip.write_audiofile(data_output_folder+"tmp2.wav")
+    y = [0, 1, 0, 1, 0, 0, 0, 0, 0, 0] #영상 길이가 10초일 때,
+       # 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+       #   *  *
+    make_quiet_wav(data_output_folder+"tmp2.wav", y, data_output_folder+"{}_result_{}.wav".format(idd, video))
     videoclip = videoclip.set_audio(AudioFileClip(data_output_folder+"{}_result_{}.wav".format(idd, video)))
-    videoclip = videoclip.subclip(28, 34)
+    videoclip = videoclip.subclip(0, 9)
     videoclip.write_videofile(data_output_folder+"{}_result_{}.mp4".format(idd, video))
     videoclip.write_videofile(data_output_folder+"{}_origin_{}.mp4".format(idd, video))
 
     print(bcolors.OKGREEN + '\nNow you can check!!! ' + bcolors.ENDC)
 
 if __name__ == '__main__':
-    video= "testVideo.mp4"
+    video= "testVideo2.mp4"
     idd = int(input('ID: '))
-    data_output_folder = DATA_BASE_PATH + "\\" + str(idd)
+    data_output_folder=DATA_BASE_PATH + "\\" + str(idd)
     try:
         if not os.path.exists(data_output_folder):
             os.makedirs(data_output_folder)
